@@ -1,0 +1,14 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "rubin-trade",
+  "description": "Official agent skills for Rubin (rubin.trade) — perpetual futures DEX on the RITBIT chain.",
+  "owner": { "name": "Rubin", "url": "https://github.com/rubin-trade" },
+  "plugins": [
+    {
+      "name": "rubin-trade",
+      "description": "Trade perps on Rubin via the official MCP server: portfolio, orders with TP/SL, funding, testnet faucet, EVM + cosmos addresses.",
+      "source": "./",
+      "category": "productivity"
+    }
+  ]
+}
