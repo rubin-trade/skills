@@ -69,4 +69,5 @@ by `whoami`).
   `deposit_to_subaccount`.
 - **Tool list looks outdated** — the host cached an older catalog; reconnect the server.
 - **Testnet funds** — deposit flow in the web app (`whoami.depositUrl`) includes the
-  faucet; scripted: `POST https://faucet.testnet.rubin.trade/faucet/tokens {"address":"rit1…"}`.
+  faucet; scripted: `POST https://faucet.testnet.rubin.trade/faucet/tokens
+  {"address":"rit1… or 0x…"}` (either address form works).

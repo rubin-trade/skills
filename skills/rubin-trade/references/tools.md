@@ -65,12 +65,12 @@ There is **no faucet MCP tool** — on testnet, free funds come from outside the
 
 1. Preferred: the user opens the deposit flow in the web app (`whoami.depositUrl`) — it
    includes the testnet faucet for the connected account.
-2. Scripted (REST, testnet only, ~1 request/hour per address per denom; accepts the
-   `rit1…` address from `whoami`):
+2. Scripted (REST, testnet only, ~1 request/hour per address per denom; accepts either
+   address form from `whoami` — `rit1…` or `0x…`, both share one rate-limit counter):
 
 ```
-POST https://faucet.testnet.rubin.trade/faucet/tokens        {"address":"rit1…"}   # test USDC
-POST https://faucet.testnet.rubin.trade/faucet/native-token  {"address":"rit1…"}   # gas token
+POST https://faucet.testnet.rubin.trade/faucet/tokens        {"address":"rit1… or 0x…"}   # test USDC
+POST https://faucet.testnet.rubin.trade/faucet/native-token  {"address":"rit1… or 0x…"}   # gas token
 ```
 
 Faucet funds land in the **wallet** (bank balance), not the trading subaccount. The full
