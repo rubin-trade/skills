@@ -10,7 +10,7 @@ description: >
 license: MIT
 metadata:
   author: rubin-trade
-  version: "1.1.0"
+  version: "1.1.1"
 ---
 
 # Trading on Rubin (rubin.trade)
@@ -61,11 +61,13 @@ Every RITBIT account has two representations of the **same 20 bytes**:
 
 When telling the user their address, **always give both forms** (both come from `whoami`).
 Deposits from EVM wallets, block explorers, and EVM tooling use the `0x` form;
-chain-native tooling uses `rit1`. The Indexer REST API and the testnet faucet accept
-address parameters in either form. The chain accepts EVM (EIP-712) signatures: trading
-keys can be authorized from an EVM wallet signature (`RubinTransaction:ApproveAgent`),
-and an EVM JSON-RPC endpoint is available (`https://evm-rpc.rubin.trade`, testnet:
-`https://evm-rpc.testnet.rubin.trade`).
+chain-native tooling uses `rit1`. When passing an address to the Indexer REST API or the
+testnet faucet, send the `rit1…` form — converting `0x` → `rit1` is a mechanical bech32
+re-encode of the same bytes: `toBech32('rit', fromHex(hex.slice(2)))`.
+
+The chain accepts EVM (EIP-712) signatures: trading keys can be authorized from an EVM
+wallet signature (`RubinTransaction:ApproveAgent`), and an EVM JSON-RPC endpoint is
+available (`https://evm-rpc.rubin.trade`, testnet: `https://evm-rpc.testnet.rubin.trade`).
 
 ## Trading semantics (what trips agents up)
 
@@ -94,13 +96,12 @@ an auth problem — do not suggest re-authorizing.
 
 Preferred: the user opens the deposit flow in the web app (`whoami.depositUrl`) — it
 includes the testnet faucet for the connected account. For scripts/CI there is a public
-REST faucet (testnet only, rate-limited ~1 request/hour per address per denom; the
-address is accepted in either form — `rit1…` or `0x…`, both share one rate-limit
-counter):
+REST faucet (testnet only, rate-limited ~1 request/hour per address per denom). Send the
+`rit1…` form of the address:
 
 ```
-POST https://faucet.testnet.rubin.trade/faucet/tokens        {"address":"rit1… or 0x…"}   # test USDC
-POST https://faucet.testnet.rubin.trade/faucet/native-token  {"address":"rit1… or 0x…"}   # gas token
+POST https://faucet.testnet.rubin.trade/faucet/tokens        {"address":"rit1…"}   # test USDC
+POST https://faucet.testnet.rubin.trade/faucet/native-token  {"address":"rit1…"}   # gas token
 ```
 
 ## Read-only REST fallback
