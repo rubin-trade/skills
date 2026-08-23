@@ -4,13 +4,13 @@ description: >
   Trade perpetual futures on Rubin (rubin.trade), the perps DEX on Rubin Chain — market
   data, portfolio, orders with TP/SL brackets, funding, fees, leaderboard, referrals, testnet
   faucet. Connects the agent to the official Rubin MCP server instead of raw REST calls.
-  Use when the user mentions Rubin, rubin.trade, Rubin Chain (also written ritbit), wants an
-  AI agent to trade or monitor perpetuals, check positions/PnL/balance, get testnet funds,
-  or asks how to connect the Rubin MCP connector.
+  Use when the user mentions Rubin, rubin.trade or Rubin Chain, wants an AI agent to trade
+  or monitor perpetuals, check positions/PnL/balance, get testnet funds, or asks how to
+  connect the Rubin MCP connector.
 license: MIT
 metadata:
   author: rubin-trade
-  version: "1.2.0"
+  version: "1.2.1"
 ---
 
 # Trading on Rubin (rubin.trade)
