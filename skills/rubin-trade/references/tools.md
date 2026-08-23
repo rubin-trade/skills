@@ -59,6 +59,25 @@ Rate limit for stateful (GTT) orders: **2/block, 20/100 blocks**.
 | `deposit_to_subaccount` | write | Wallet → trading subaccount (default: everything above the $0.95 gas reserve). Internal only. |
 | `top_up_gas` | write | Subaccount → wallet, only to restore the $0.95 gas reserve when the wallet ≤ $0.55. Cannot send anywhere else. |
 
+## Testnet funds (faucet)
+
+There is **no faucet MCP tool** — on testnet, free funds come from outside the MCP session:
+
+1. Preferred: the user opens the deposit flow in the web app (`whoami.depositUrl`) — it
+   includes the testnet faucet for the connected account.
+2. Scripted (REST, testnet only, ~1 request/hour per address per denom; accepts the
+   `rit1…` address from `whoami`):
+
+```
+POST https://faucet.testnet.rubin.trade/faucet/tokens        {"address":"rit1…"}   # test USDC
+POST https://faucet.testnet.rubin.trade/faucet/native-token  {"address":"rit1…"}   # gas token
+```
+
+Faucet funds land in the **wallet** (bank balance), not the trading subaccount. The full
+flow is: faucet → wallet → `deposit_to_subaccount` → trade. If balance still shows 0
+after the faucet, run `get_funding_status` — it tells you what to do next. On mainnet
+there is no faucet; deposits come through the bridge (see https://docs.rubin.trade).
+
 ## Profile & programs
 
 | Tool | Purpose |
