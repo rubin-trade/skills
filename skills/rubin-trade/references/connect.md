@@ -70,5 +70,5 @@ by `whoami`).
 - **Tool list looks outdated** — the host cached an older catalog; reconnect the server.
 - **Testnet funds** — deposit flow in the web app (`whoami.depositUrl`) includes the
   faucet; scripted: `POST https://faucet.testnet.rubin.trade/faucet/tokens
-  {"address":"rit1…"}` — send the `rit1` form (`whoami` returns both; `0x` → `rit1` is a
-  bech32 re-encode of the same bytes).
+  {"address":"rit1… or 0x…"}` (either address form works — both map to one account and
+  one rate-limit counter).
