@@ -18,6 +18,18 @@ and cosmos `rit1…` address forms, correct order semantics, and the testnet fau
 npx skills add rubin-trade/skills
 ```
 
+Or straight from the docs site, which publishes an
+[Agent Skills Discovery](https://github.com/cloudflare/agent-skills-discovery-rfc) manifest:
+
+```bash
+npx skills add https://docs.rubin.trade
+```
+
+The `skills` CLI needs **Node 20.12+** (it imports `styleText` from `node:util`). On Node 18
+it fails with `SyntaxError: The requested module 'node:util' does not provide an export
+named 'styleText'` — run it under a newer Node, e.g. `nvm exec 22 npx skills add
+rubin-trade/skills`, rather than changing your default Node.
+
 Claude Code plugin (with updates):
 
 ```bash
