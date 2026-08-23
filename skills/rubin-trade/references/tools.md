@@ -8,7 +8,7 @@ is missing recent tools, reconnect — hosts cache the tool catalog.
 
 | Tool | Kind | Purpose |
 |---|---|---|
-| `whoami` | read | Call first. Master account in **both** forms (cosmos `rit1…` + EVM `0x…`, same 20 bytes), subaccount, trade vs read-only mode, on-chain scope (`canWithdraw:false`, `canTransfer:false`), operator limits (`maxOrderUsdc`, `allowedMarkets`), `depositUrl`, `webUrl`, `serverVersion`. |
+| `whoami` | read | Call first. Master account in **both** forms (bech32 `rit1…` + EVM `0x…`, same 20 bytes), subaccount, trade vs read-only mode, on-chain scope (`canWithdraw:false`, `canTransfer:false`), operator limits (`maxOrderUsdc`, `allowedMarkets`), `depositUrl`, `webUrl`, `serverVersion`. |
 | `get_block_height` | read | Latest chain height (needed for SHORT_TERM `goodTilBlock` math). |
 
 ## Market data

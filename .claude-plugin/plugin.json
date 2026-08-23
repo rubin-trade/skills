@@ -1,6 +1,6 @@
 {
   "name": "rubin-trade",
-  "description": "Trade perpetual futures on Rubin (rubin.trade), the perps DEX on Rubin Chain, through the official MCP server — market data, portfolio, orders with TP/SL brackets, funding, fees, testnet faucet. Includes connect instructions for the Rubin MCP connector and EVM/cosmos address handling.",
+  "description": "Trade perpetual futures on Rubin (rubin.trade), the perps DEX on Rubin Chain, through the official MCP server — market data, portfolio, orders with TP/SL brackets, funding, fees, testnet faucet. Includes connect instructions for the Rubin MCP connector and EVM/bech32 address handling.",
   "author": { "name": "Rubin", "url": "https://github.com/rubin-trade" },
   "homepage": "https://docs.rubin.trade"
 }

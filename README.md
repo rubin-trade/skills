@@ -10,7 +10,7 @@
 
 Teach your AI agent (Claude Code, Cursor, Codex, any [Agent Skills](https://agentskills.io)-compatible
 host) to trade on Rubin the right way: through the official MCP server, with both EVM `0x…`
-and cosmos `rit1…` address forms, correct order semantics, and the testnet faucet.
+and native `rit1…` address forms, correct order semantics, and the testnet faucet.
 
 ## Install
 

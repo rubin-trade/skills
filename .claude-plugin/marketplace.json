@@ -6,7 +6,7 @@
   "plugins": [
     {
       "name": "rubin-trade",
-      "description": "Trade perps on Rubin via the official MCP server: portfolio, orders with TP/SL, funding, testnet faucet, EVM + cosmos addresses.",
+      "description": "Trade perps on Rubin via the official MCP server: portfolio, orders with TP/SL, funding, testnet faucet, EVM + bech32 addresses.",
       "source": "./",
       "category": "productivity"
     }

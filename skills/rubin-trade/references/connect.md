@@ -58,7 +58,7 @@ Accounts are dual-form: the same 20 bytes as `0x…` (EVM) and `rit1…` (bech32
 keys can be authorized by an **EVM wallet signature** — the web app uses an EIP-712
 typed message (`RubinTransaction:ApproveAgent`) and registers an
 `EthAddressSignatureVerification` authenticator, so MetaMask-style wallets work without
-any Cosmos tooling. Agents should always report both address forms (both are returned
+any chain-native tooling. Agents should always report both address forms (both are returned
 by `whoami`).
 
 ## Troubleshooting

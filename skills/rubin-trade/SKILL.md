@@ -10,13 +10,13 @@ description: >
 license: MIT
 metadata:
   author: rubin-trade
-  version: "1.2.1"
+  version: "1.3.0"
 ---
 
 # Trading on Rubin (rubin.trade)
 
-Rubin is a decentralized perpetual futures exchange on Rubin Chain (a Cosmos SDK
-chain with EVM support). Full documentation: **https://docs.rubin.trade**
+Rubin is a decentralized perpetual futures exchange on Rubin Chain, a sovereign
+proof-of-stake chain with EVM support. Full documentation: **https://docs.rubin.trade**
 
 ## Rule 1 — use the MCP server, not raw REST
 
@@ -57,7 +57,7 @@ Never invent an address, mnemonic, or key.
 Every Rubin Chain account has two representations of the **same 20 bytes**:
 
 - EVM form: `0x…` (hex)
-- Cosmos form: `rit1…` (bech32)
+- Native form: `rit1…` (bech32)
 
 When telling the user their address, **always give both forms** (both come from `whoami`).
 Deposits from EVM wallets, block explorers, and EVM tooling use the `0x` form;
