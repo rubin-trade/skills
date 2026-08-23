@@ -2,7 +2,7 @@
 
 # Rubin Agent Skills
 
-**Official agent skills for [Rubin](https://rubin.trade) — perpetual futures DEX on the RITBIT chain.**
+**Official agent skills for [Rubin](https://rubin.trade) — perpetual futures DEX on Rubin Chain.**
 
 [Docs](https://docs.rubin.trade) · [Testnet](https://testnet.rubin.trade) · [MCP endpoint](https://mcp.testnet.rubin.trade/mcp)
 

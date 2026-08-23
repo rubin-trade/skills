@@ -1,7 +1,7 @@
 {
   "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
   "name": "rubin-trade",
-  "description": "Official agent skills for Rubin (rubin.trade) — perpetual futures DEX on the RITBIT chain.",
+  "description": "Official agent skills for Rubin (rubin.trade) — perpetual futures DEX on Rubin Chain.",
   "owner": { "name": "Rubin", "url": "https://github.com/rubin-trade" },
   "plugins": [
     {

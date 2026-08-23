@@ -1,21 +1,21 @@
 ---
 name: rubin-trade
 description: >
-  Trade perpetual futures on Rubin (rubin.trade), the perps DEX on the RITBIT chain — market
+  Trade perpetual futures on Rubin (rubin.trade), the perps DEX on Rubin Chain — market
   data, portfolio, orders with TP/SL brackets, funding, fees, leaderboard, referrals, testnet
   faucet. Connects the agent to the official Rubin MCP server instead of raw REST calls.
-  Use when the user mentions Rubin, rubin.trade, RITBIT, ritbit chain, wants an AI agent to
-  trade or monitor perpetuals, check positions/PnL/balance, get testnet funds, or asks how to
-  connect the Rubin MCP connector.
+  Use when the user mentions Rubin, rubin.trade, Rubin Chain (also written ritbit), wants an
+  AI agent to trade or monitor perpetuals, check positions/PnL/balance, get testnet funds,
+  or asks how to connect the Rubin MCP connector.
 license: MIT
 metadata:
   author: rubin-trade
-  version: "1.1.1"
+  version: "1.2.0"
 ---
 
 # Trading on Rubin (rubin.trade)
 
-Rubin is a decentralized perpetual futures exchange on the RITBIT chain (a Cosmos SDK
+Rubin is a decentralized perpetual futures exchange on Rubin Chain (a Cosmos SDK
 chain with EVM support). Full documentation: **https://docs.rubin.trade**
 
 ## Rule 1 — use the MCP server, not raw REST
@@ -54,7 +54,7 @@ Never invent an address, mnemonic, or key.
 
 ## Addresses: always both forms, EVM included
 
-Every RITBIT account has two representations of the **same 20 bytes**:
+Every Rubin Chain account has two representations of the **same 20 bytes**:
 
 - EVM form: `0x…` (hex)
 - Cosmos form: `rit1…` (bech32)
