@@ -10,7 +10,7 @@ description: >
 license: MIT
 metadata:
   author: rubin-trade
-  version: "1.4.0"
+  version: "1.4.1"
 ---
 
 # Trading on Rubin (rubin.trade)
