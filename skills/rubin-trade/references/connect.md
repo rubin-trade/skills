@@ -16,9 +16,11 @@ dynamic client registration). Flow:
 
 1. Add the MCP URL as a custom connector / remote MCP server.
 2. The consent page redirects to the Rubin web app's authorize page.
-3. The user connects a wallet and approves — the web app issues a **scoped trading key**
-   for that account and completes the flow. The private key travels in a POST body,
-   never in a URL, and never enters the model context.
+3. The user picks the account and confirms one wallet signature. The MCP server generates
+   the **scoped trading key** itself and returns only its public address; the wallet approves
+   that address on-chain, the server checks the registration and finishes the flow. The
+   private key never crosses the network and never enters the model context — details:
+   https://docs.rubin.trade/agents/oauth
 
 Claude Code:
 
@@ -47,9 +49,11 @@ Omit `tradingPrivateKey` for a read-only session (market data + account reads).
 ## What the key can and cannot do
 
 The trading key is registered on-chain (x/accountplus authenticator) with scope:
-**place order / cancel order / batch cancel, subaccount 0 only**. It physically
-**cannot withdraw or transfer funds** — that boundary is enforced by the chain, not the
-server. One authorization = one account; to trade from another wallet, authorize the
+**place order / cancel order / batch cancel on subaccount 0**, plus moving USDC between the
+account's **own** wallet and subaccount (`deposit_to_subaccount`, `top_up_gas`). It physically
+**cannot withdraw from Rubin or send funds to another address** — that boundary is enforced by
+the chain, not the server. Removing the connector in the host deletes only its token; to
+revoke fully, remove the `mcp-agent-…` key in the web app (More → API Trading Keys). One authorization = one account; to trade from another wallet, authorize the
 connector again from that wallet (a new authorization = a new MCP key).
 
 ## EVM signatures
